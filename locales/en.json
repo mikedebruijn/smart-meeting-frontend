@@ -1,0 +1,13 @@
+{
+    "__index":"",
+    "welcome":"Welcome to the meeting app",
+
+    "meetingTemplates":"Meeting templates",
+    "presentationMode":"Presentation mode",
+    "collaborate":"Collaborate by taking minutes and action points together",
+    "tagMinutes":"Tag minutes as \"desicion\" or \"follow up\"",
+    "groupMeetings":"Group meetings to merge their actions",
+    "emailMinutes":"Email all attendees with the meeting minutes when you are done",
+
+    "":""
+}

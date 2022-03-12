@@ -1,0 +1,199 @@
+body,html{
+    margin:0;
+    padding:0;
+}
+*{
+    font-family:helvetica;
+}
+table{
+    width:100%;
+    border-collapse:collapse;
+    thead {
+        tr{
+            border-bottom:1px solid black;
+            border-top:1px solid black;
+            th{
+                padding:4px 2px;
+                text-align:left;
+            }
+        }
+    }
+    tbody{
+        tr {
+            td{
+                padding:8px 4px;
+                border:none;
+            }
+            .actions>svg{
+                margin-right:4px;
+            }
+        }
+        tr:nth-child(odd){
+            background:#EEE;
+        }
+    }
+}
+.well{
+    background:#EEE;
+    border:1px solid #ddd;
+    border-radius:16px;
+    padding:16px;
+    width:100%;
+    box-sizing:border-box;
+    margin-bottom:32px;
+    position:relative;
+}
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+    supported by Chrome, Edge, Opera and Firefox */
+}
+input {
+    border:1px solid #ccc;
+    padding:4px 8px;
+    border-radius:8px;
+
+}
+.form {
+    div {
+        clear:both;
+        margin-bottom:8px;
+        label {
+            display:inline-block;
+            font-weight:bold;
+            width:200px;
+            margin:4px 0;
+            float:left
+        }
+        input{
+            width:calc(100% - 206px);
+            display:inline-block;
+            box-sizing:border-box;
+        }
+    }
+}
+.agenda-container {
+    color:#EEE;
+    font-size:24px;
+    .agenda-bg{
+        position:absolute;
+        top:0;left:0;right:0;bottom:0;
+        background: #111;
+        z-index:-1;
+    }
+    .agenda li, .agenda li.item{
+        margin-bottom:12px;
+    }
+    .header{
+        box-sizing:border-box;
+        padding:0 8px;
+        position:top;
+        height:100px;
+        width:100%;
+        left:0;top:0;
+        h1{
+            $h:40px;
+            margin:20px 0 4px;
+            font-size:36px;
+            white-space:nowrap;
+            overflow:hidden;
+            text-overflow:ellipsis;
+            height:$h;
+            line-height:$h;
+            color:#EEE;
+        }
+        p{
+            $h:20px;
+            height:$h;
+            line-height:$h;
+            white-space:nowrap;
+            overflow:hidden;
+            font-size:16px;
+            color:#AAA;
+        }
+    }
+    .agenda-inner{
+        position:absolute;
+        top:100px;
+        left:0;
+        right:0;
+        bottom:0;
+        $agendaWidth: 33.333%;
+        $minuteWidth: 33.333%;
+        .box{
+            position:absolute;
+            padding:8px;
+
+            box-sizing:border-box;
+            .container{
+                box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+                box-sizing:border-box;
+                position:relative;
+                width:100%;
+                height:100%;
+                border-radius:8px;
+                overflow:hidden;
+                $headerHeight:40px;
+                h2 {
+                    font-size:18px;
+                    text-align:center;
+                    background:linear-gradient(0deg,#3a3a3a,#333);
+                    margin:0;
+                    padding:0 8px;
+                    text-transform:uppercase;
+                    color:#AAA;
+                    box-sizing:border-box;
+                    height:$headerHeight;
+                    line-height:$headerHeight;
+                }
+                .inner{
+                    background: radial-gradient(#666, #555);
+                    position:absolute;
+                    top:$headerHeight;
+                    padding:8px;
+                    bottom:0;
+                    left:0;
+                    right:0;
+                    overflow-y:auto;
+                    overflow-x:hidden;
+                    ol,ul{
+                        margin:0;
+                        li.active{
+                            color:#2471ff;
+                        }
+                        li.inactive{
+                            color:white;
+                        }
+                    }
+                }
+            }
+        }
+        .agenda{
+            top:0;left:0;
+            width:$agendaWidth;
+            height:100%;
+            li {
+                cursor:pointer;
+            }
+        }
+        .agenda-decisions{
+            width:$minuteWidth;
+            height:50%;
+            top:0;right:0;
+        }
+        .agenda-actions{
+            width:$minuteWidth;
+            height:50%;
+            bottom:0;right:0;
+        }
+        .agenda-minutes{
+            width:$minuteWidth;
+            height:100%;
+            left:$agendaWidth;
+        }
+    }
+}
